@@ -86,6 +86,7 @@ function App() {
     //     { id: 3, name: 'رصف الطبقة الأولى', status: 'pending', dueDate: '2024-04-15' }
     //   ]
     // }
+    // 1<:
   ]);
 
   const totalBudget = projects.reduce((sum, project) => sum + project.budget, 0);
