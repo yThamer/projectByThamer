@@ -144,7 +144,6 @@ function App() {
           return task;
         });
         
-        // Calculate new progress based on completed tasks
         const completedTasks = updatedTasks.filter(task => task.status === 'completed').length;
         const progress = Math.round((completedTasks / updatedTasks.length) * 100);
         
