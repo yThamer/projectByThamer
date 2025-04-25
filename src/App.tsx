@@ -49,7 +49,38 @@ function App() {
   });
 
   const [projects, setProjects] = useState<Project[]>([
-
+ {
+      id: 1,
+      name: 'مشروع برج السكني',
+      progress: 65,
+      workers: 45,
+      equipment: ['حفارة', 'رافعة', 'خلاطة'],
+      budget: 2000000,
+      spent: 1300000,
+      startDate: '2024-03-01',
+      endDate: '2024-12-31',
+      tasks: [
+        { id: 1, name: 'حفر الأساسات', status: 'completed', dueDate: '2024-03-15' },
+        { id: 2, name: 'صب الخرسانة', status: 'in-progress', dueDate: '2024-04-01' },
+        { id: 3, name: 'تركيب الهيكل المعدني', status: 'pending', dueDate: '2024-05-01' }
+      ]
+    },
+    {
+      id: 2,
+      name: 'تطوير الطريق السريع',
+      progress: 30,
+      workers: 28,
+      equipment: ['معدات رصف', 'شاحنة'],
+      budget: 1500000,
+      spent: 450000,
+      startDate: '2024-02-15',
+      endDate: '2024-08-30',
+      tasks: [
+        { id: 1, name: 'إزالة الطبقة القديمة', status: 'completed', dueDate: '2024-03-01' },
+        { id: 2, name: 'تمهيد الأرض', status: 'in-progress', dueDate: '2024-03-30' },
+        { id: 3, name: 'رصف الطبقة الأولى', status: 'pending', dueDate: '2024-04-15' }
+      ]
+    }
   ]);
 
   const totalBudget = projects.reduce((sum, project) => sum + project.budget, 0);
